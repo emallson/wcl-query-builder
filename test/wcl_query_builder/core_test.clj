@@ -42,31 +42,31 @@
   [{:target {:id 1}
     :source {:id 2}
     :type :applybuff
-    :range {:buff '(0)}
+    :range {:buff {:start '(0)}}
     :ability {:guid 123
               :name "Test"}}
    {:target {:id 2}
      :source {:id 1}
      :type :damage
-     :range {:buff '(0)}
+     :range {:buff {:match '(0)}}
      :ability {:guid 1
                :name "Melee"}}
    {:target {:id 3}
     :source {:id 2}
     :type :applybuff
-    :range {:buff '(1)}
+    :range {:buff {:start '(1)}}
     :ability {:guid 123
               :name "Test"}}
    {:target {:id 1}
     :source {:id 2}
     :ability {:guid 123
               :name "Test"}
-    :range {:buff '(0)}
+    :range {:buff {:end '(0)}}
     :type :removebuff}
    {:target {:id 2}
     :source {:id 3}
     :type :heal
-    :range {:buff '(1)}
+    :range {:buff {:match '(1)}}
     :ability {:guid 1234}}
    {:target {:id 47}
     :source {:id 48}
@@ -74,7 +74,7 @@
    {:target {:id 3}
     :source {:id 2}
     :type :removebuff
-    :range {:buff '(1)}
+    :range {:buff {:end '(1)}}
     :ability {:guid 123
               :name "Test"}}])
   
